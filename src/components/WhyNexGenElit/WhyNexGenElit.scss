@@ -1,0 +1,150 @@
+.whyNex{
+    padding: 100px calc(3.5vw + 5px);
+    overflow-x: hidden;
+    // background: rebeccapurple;
+    
+    .headings{
+       
+        h4{
+            font-size: 28px;
+            text-align: center;
+            font-weight: 900;
+            line-height: 1.4;
+            letter-spacing: 1px;
+        }
+        .first-heading{
+            border: 1px solid black;
+            max-width: 350px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 3px 20px;
+            border-radius: 50px;
+            position: relative;
+
+            span{
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: fit-content;
+                border-left: 2px solid black;
+                border-radius: 50px;
+                padding:3px 30px;
+                background: #d0ffa1;
+            }
+        }
+        .second-heading{
+            max-width: 700px;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+        
+    }
+    .imgAnimations{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 50px;
+        position: relative;
+
+        .itemContainer{
+            // z-index: -1;
+            width: 100%;
+
+        .item{
+            cursor: pointer;
+            width: 100%;
+            padding: 50px 0;
+            border-bottom: 3px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0.3;
+            transition: all 500ms;
+            position: relative;
+            z-index: 100;
+            
+            .img-container{
+                position: absolute;
+                pointer-events: none;
+                left: -100px;
+                top: -200px;
+                transform: translate(100px ,200px);
+                height: 200px ;
+                width: 200px;
+                border-radius: 20px;
+                overflow: hidden;
+                opacity: 0;
+                z-index: -1;
+                transform: scale(0);
+                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+
+                }
+            }
+            h5{
+                font-size: 24px;
+            }
+            h2{
+                font-size: 5.5vw;
+            }
+            p{
+                max-width: 400px;
+                font-size: 1.25rem;
+            }
+
+
+        }
+    }
+        .item.active{
+            opacity: 1;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 480px) {
+    .whyNex{
+        padding: 50px calc(3.5vw + 5px);
+        
+        .headings{
+            
+            .first-heading{
+                width: 300px;
+                font-size: 1.45rem;
+            }
+            .second-heading{
+                font-size: 1.25rem,
+            }
+            
+        }
+        .imgAnimations{
+    
+    
+            .item{
+                height: 70vh;
+                flex-direction: column;
+    
+                h2{
+                    font-size: calc(5.5vw + 8vw) !important;
+                }
+                p{
+                    max-width: 400px;
+                    font-size: 1.25rem;
+                }
+    
+    
+            }
+            .item.active{
+                opacity: 1;
+            }
+        }
+    
+    }
+}

@@ -1,0 +1,81 @@
+.testimonial{
+
+    h2{
+        font-size: 3.5rem;
+        margin-bottom: 30px;
+    }
+
+    padding:100px 0;
+}
+
+figure.card {
+
+    position: relative;
+    margin: 10px;
+   height: 340px;
+    max-width: 310px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #333;
+    box-shadow: none !important;
+    margin: 0;
+    border: 2px solid orange;
+    border-radius: 8px;
+    background-color: #fafafa;
+    padding: 20px ;
+    font-weight: 500;
+    line-height: 1.6em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+
+
+    h5{
+      font-size: 18px;
+      margin-top: 20px;
+      text-align: right;
+  
+      span{
+        font-size: 12px;
+        display: block;
+      }
+    }
+  }
+ 
+
+ 
+  figure.card blockquote {
+    margin: 0;
+    border-radius: 8px;
+    position: relative;
+    background-color: #fafafa;
+    padding: 0px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6em;
+  }
+  figure.card blockquote:before,
+  figure.card blockquote:after {
+    font-family: 'FontAwesome';
+    content: "\201C";
+    position: absolute;
+    font-size: 20px;
+    opacity: 0.3;
+    font-style: normal;
+  }
+  figure.card blockquote:before {
+    top: 0px;
+    left: 5px;
+  }
+  figure.card blockquote:after {
+    content: "\201D";
+    right: 20px;
+    bottom: 0px;
+  }
+
+
+  .stars{
+    color: orange;
+    padding: 0px 20px ;
+    font-size: 24px;
+  }

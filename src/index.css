@@ -1,0 +1,29 @@
+@font-face {
+  font-family: gilroy-extra-bold;
+  src: url("../public/fonts/Gilroy-FREE/Gilroy-ExtraBold.otf");
+}
+
+@font-face {
+  font-family: gilroy-light;
+  src: url("../public/fonts/Gilroy-FREE/Gilroy-Light.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: rgba(255, 255, 255, 0.933);
+  font-family: gilroy-light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

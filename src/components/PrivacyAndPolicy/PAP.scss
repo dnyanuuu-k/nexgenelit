@@ -1,0 +1,30 @@
+.pap{
+    // margin-top: 100PX;
+    padding: 50px calc(7.5vw + 5px);
+    background: black;
+    color: white;
+    h1{
+        font-size: 5.5rem;
+        width: fit-content;
+        margin: 50px auto;
+    }
+    h2 {
+        font-weight: 900;
+        color: white;
+    }
+    p {
+        margin: 10px 0;
+        opacity: 0.7;
+        font-size: 18px;
+    }
+    .section {
+        margin-bottom: 20px;
+    }
+    .contact-info {
+        margin-top: 20px;
+    }
+    a{
+        color: white;
+    }
+    
+}

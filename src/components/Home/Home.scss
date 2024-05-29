@@ -1,0 +1,281 @@
+.explore-more{
+    
+    button {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        border: 0;
+        vertical-align: middle;
+        text-decoration: none;
+        background: transparent;
+        padding: 0;
+        font-size: inherit;
+        font-family: inherit;
+        border: 1px solid var(--primary-color);
+        border-radius: 1.625rem;
+       }
+       
+       button.learn-more {
+        width: 15rem;
+        height: auto;
+       }
+       
+       button.learn-more .circle {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3rem;
+        height: 3rem;
+        background:black;
+        border-radius: 1.625rem;
+       }
+       
+       button.learn-more .circle .icon {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #ffffff;
+        color: rgb(255, 255, 255);
+       }
+       
+       button.learn-more .circle .icon.arrow {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        left: 0.625rem;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: white;
+       }
+       
+       button.learn-more .circle .icon.arrow::before {
+        position: absolute;
+        content: "";
+        // background: white;
+        top: -0.29rem;
+        right: 0.0625rem;
+        width: 0.625rem;
+        height: 0.625rem;
+        border-top: 0.125rem solid #ffffff;
+        border-right: 0.125rem solid #ffffff;
+        transform: rotate(45deg);
+       }
+       
+       button.learn-more .button-text {
+        transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 0.70rem 0;
+        margin: 0 0 0 1.85rem;
+        color: black;
+        border: 1px solid black;
+        border-radius: 1.625rem;
+        opacity: .7;
+        font-weight: 900;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1.45px;
+       }
+       
+       button:hover .circle {
+        width: 110%;
+       }
+       button:hover .circle .icon.arrow {
+        background:white;
+        transform: translate(1rem, 0);
+       }
+       
+       button .button-text {
+            color: black;
+       }
+       button:hover .button-text {
+        color: white;
+        border: none;
+       }
+}
+.allContent{
+  
+  background: radial-gradient(125% 105% at 50% 10%, #fff 40%, #63e 100% );
+
+}
+.Home{
+
+  .movingCursor{
+    height: 20px;
+    width: 20px;
+    background:none;
+    position: fixed;
+    top: -5px;
+    left: -5px;
+    border: 3px solid #63e;
+    z-index: 15;
+    border-radius: 50px;
+  }
+  .grov{
+    transform: scale(8);
+    background: white;
+    mix-blend-mode: difference;
+    border-radius: 2px solid black;
+  }
+  .bgVideo{
+    height: 100vh;
+    width: 100%;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+
+    video{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .main
+  {
+    z-index: 10;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #f3f3f3;
+      min-height: 100vh;
+      padding-top: 100px;
+      padding: 0 calc(7.5vw + 5px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .radialGradient{
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: radial-gradient(125% 125% at 50% 10%, #fff 40%, #63e 100% );
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+
+    }
+      .heading-container{
+        // z-index: -1;
+        // border: 2px solid black;
+        overflow: hidden;
+
+        h1{
+            font-size: 13.5vw;
+            font-family: gilroy-extra-bold;
+            line-height: 0.9;
+           }
+    }
+      .first-heading{
+        position: relative;
+      }
+      .first-heading:before{
+        content: "NexGen Elit";
+        position: absolute;
+        top: -2px;
+        left: 2px;
+        font-size: 1.35vw;
+
+      }
+    .seconde-heading{
+        display: flex;
+        align-items: baseline;
+        margin-left: calc(13.5vw + 9vw);
+
+        span{
+            font-size: 5vw;
+            margin-left: 1.4vw;
+            font-weight: 900;
+        }
+    }
+    .third-heading {
+        display: flex;
+        align-items:baseline;
+        justify-content: space-between;
+        gap: 30px;
+        flex-direction: column;
+        position: relative;
+
+   
+    }
+    p{
+        max-width: 300px;
+        position: absolute;
+        right: calc(3.5vw + 5px);
+        bottom: 35px;
+        font-size: 20px;
+        font-weight: 900;
+
+    }
+
+  
+}
+
+.startProject{
+    position: fixed;
+    bottom:50px ;
+    right: calc(3.5vw + 5px);
+    z-index: 100;
+    opacity: 0;
+
+}
+
+    
+
+        @keyframes moving {
+            from {
+              transform: translateX(100px);
+              opacity: 0;
+            }
+            to {
+              transform: translateX(0px);
+              opacity: 1;
+            }
+          }
+}
+
+
+
+
+@media screen and (max-width: 480px) {  
+        .main{
+            padding: 0 calc(3.5vw + 5px) !important;
+
+            .heading-container{
+                h1{
+                    color: white;
+                    line-height: 2.9;
+                    font-size: 18.5vw !important;
+                }
+                
+            }
+            .first-heading:before{
+                display: none;
+            }
+            .seconde-heading{
+                margin-left: 0px !important;
+
+            }
+           
+        p{
+        width: 100%;
+        position: relative !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        font-size: 18px !important;
+        font-weight: 900;
+        margin-top: 20px;
+        }
+    }
+
+    .startProject{
+      right: calc(7.5vw + 5px);
+  
+  }
+  
+}

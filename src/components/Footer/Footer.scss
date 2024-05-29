@@ -1,0 +1,158 @@
+.footer{
+    padding: 50px calc(7.5vw + 5px );
+    background: black;
+    height: 300px;
+    z-index: 200;
+    .footer-content{
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid white;
+        
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover{
+            color:#D5FF28;
+        }
+        .left-side{
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            align-items: center;
+            border-right: 2px solid white;
+            
+            h5{
+                font-size: 1.45rem;
+                font-weight: 900;
+                left: 1px;
+                color: white;
+            }
+        }
+        .right-side{
+            display: flex;
+            color: white;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            // padding: 20px;
+            // gap: 20px;
+            
+            
+            .top{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                width: 100%;
+                height: 50%;
+                font-size: 20px;
+
+
+                .hyperlinks{
+                    border-right: 2px solid white;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+                    align-items: center;
+                    
+                    a{
+                        font-size: 16px;
+                    }
+                }
+            }
+            .bottom{
+                height: 50%;
+                width: 100%;
+                border-top: 2px solid white;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                align-items: center;
+                div{
+                border-right:2px solid white ;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                align-items: center;
+            }
+
+            div:last-child{
+                border-right: none;
+            }
+        }
+        
+    }
+    }
+}
+
+@media screen and (max-width: 480px) {  
+
+
+    .footer{
+        padding: 50px 20px;
+        min-height: 50vh;
+        .footer-content{
+            border: 2px solid white;
+            // border-top: 2px solid white;
+            // border-bottom: 2px solid white;
+            flex-direction: column;
+            border-radius: 20px;
+    
+            .left-side{
+                width: 100%;
+                justify-content: center;
+                padding-right: 0px;
+                height: 36%;
+                border-right: none;
+            }
+            .right-side{
+                flex-direction: column;
+                
+                .top{
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    align-items: center;
+                    width: 100%;
+                    height: 50%;
+                    font-size: 20px;
+                    border-right: none;
+                    
+    
+                    .hyperlinks{
+                        border-top:2px solid white ;
+                        border-bottom:2px solid white ;
+                        border-right: none;
+                    }
+                }
+                .bottom{
+                    border-top: 2px solid white;
+                    grid-template-columns: 1fr;
+                    div{
+                    border-right:none ;
+                    border-top: 2px solid white;
+                }
+    
+                div:first-child{
+                    border-top: none;
+                }
+            }
+            
+        }
+        }
+    }
+    
+
+
+
+}
