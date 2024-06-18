@@ -22,7 +22,7 @@ function FAQ() {
   return (
     <div className="faq">
       {/* <div className="waveContainer">
-        <img src="/images/wave6.svg" alt="" />
+        <img src="/images/wave6.svg" alt="alt-image" />
       </div> */}
       <h2 className="main-heading">FAQ's</h2>
       <div className="questions-container">

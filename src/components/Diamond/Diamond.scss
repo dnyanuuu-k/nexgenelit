@@ -1,6 +1,6 @@
 .diamond {
     height: calc(100vh - 100px);
-    background: black;
+    background: transparent;
     width: 100%;
     padding: 100px 0;
     position: relative;
@@ -83,6 +83,7 @@
     .diamondHeading h1 {
         font-size: 13.5vw !important;
     }
+    
 }
 
 // Tablet devices

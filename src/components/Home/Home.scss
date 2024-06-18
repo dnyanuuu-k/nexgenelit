@@ -17,7 +17,7 @@
        }
        
        button.learn-more {
-        width: 15rem;
+        width: 14rem;
         height: auto;
        }
        
@@ -66,7 +66,7 @@
        button.learn-more .button-text {
         transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
         position: absolute;
-        width: 100%;
+        width: 110%;
         top: 0;
         left: 0;
         right: 0;
@@ -85,7 +85,7 @@
        }
        
        button:hover .circle {
-        width: 110%;
+        width: 120%;
        }
        button:hover .circle .icon.arrow {
         background:white;
@@ -107,6 +107,7 @@
 }
 .Home{
 
+  z-index: 100;
   .movingCursor{
     height: 20px;
     width: 20px;
@@ -125,6 +126,9 @@
     border-radius: 2px solid black;
   }
   .bgVideo{
+    position: fixed;
+    left: 0;
+    top: 0;
     height: 100vh;
     width: 100%;
     // position: fixed;
@@ -140,11 +144,11 @@
   .main
   {
     z-index: 10;
-      position: absolute;
+      position: relative;
       top: 0;
       left: 0;
       color: #f3f3f3;
-      min-height: 100vh;
+     height: 100vh;
       padding-top: 100px;
       padding: 0 calc(7.5vw + 5px);
       display: flex;
@@ -219,9 +223,57 @@
 .startProject{
     position: fixed;
     bottom:50px ;
-    right: calc(3.5vw + 5px);
+    right: calc(7.5vw + 5px);
     z-index: 100;
     opacity: 0;
+
+
+    .explore-more{
+    
+      button {
+          border: 1px solid white;
+          border: none;
+         }
+         
+         button.learn-more .circle {
+          background:white;
+         }
+         
+         button.learn-more .circle .icon {
+          background: black;
+          color: black;
+         }
+         
+         button.learn-more .circle .icon.arrow {
+          background: black;
+         }
+         
+         button.learn-more .circle .icon.arrow::before {
+          
+          border-top: 0.125rem solid black;
+          border-right: 0.125rem solid black;
+         }
+         
+         button.learn-more .button-text {
+          color: white;
+          border: 1px solid white;
+         }
+         
+         button:hover .circle {
+          width: 122%;
+         }
+         button:hover .circle .icon.arrow {
+          background:black;
+         }
+         
+         button .button-text {
+              color: white;
+              border: none;
+         }
+         button:hover .button-text {
+          color: black;
+         }
+  }
 
 }
 
@@ -274,8 +326,8 @@
     }
 
     .startProject{
+      margin-right: calc(7.5vw + 5px);
       right: calc(7.5vw + 5px);
-  
   }
   
 }

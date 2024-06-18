@@ -1,6 +1,8 @@
 .whyNex{
     padding: 100px calc(3.5vw + 5px);
     overflow-x: hidden;
+    color: white;
+    position: relative;
     // background: rebeccapurple;
     
     .headings{
@@ -13,13 +15,14 @@
             letter-spacing: 1px;
         }
         .first-heading{
-            border: 1px solid black;
+            border: 1px solid white;
             max-width: 350px;
             margin: 0 auto;
             text-align: left;
             padding: 3px 20px;
             border-radius: 50px;
             position: relative;
+            color: white;
 
             span{
                 position: absolute;
@@ -27,10 +30,11 @@
                 right: 0;
                 height: 100%;
                 width: fit-content;
-                border-left: 2px solid black;
+                border-left: 2px solid white;
                 border-radius: 50px;
                 padding:3px 30px;
                 background: #d0ffa1;
+                color: black;
             }
         }
         .second-heading{
@@ -56,7 +60,7 @@
             cursor: pointer;
             width: 100%;
             padding: 50px 0;
-            border-bottom: 3px solid black;
+            border-bottom: 3px solid white;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -78,7 +82,7 @@
                 opacity: 0;
                 z-index: -1;
                 transform: scale(0);
-                box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+                box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 
                 img{
                     width: 100%;
@@ -93,11 +97,15 @@
             h2{
                 font-size: 5.5vw;
             }
-            p{
+            .heading-para{
                 max-width: 400px;
                 font-size: 1.25rem;
+                opacity: 0;
+                transition: all ease 1000ms;
             }
-
+            .heading-para.active{
+                opacity: 1;
+            }
 
         }
     }

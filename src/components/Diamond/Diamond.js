@@ -20,7 +20,7 @@ function Diamond() {
   return (
     <div className="diamond">
       <div className="diamondVideo">
-        <img src="/videos/diamond.gif" autoPlay loop muted></img>
+        <img src="/videos/diamond.gif" alt="diamond" autoPlay loop muted></img>
       </div>
       <div className="diamondContent">
         <div>
@@ -30,19 +30,19 @@ function Diamond() {
           <div className="diamondHeading">
             <h1>NexGenElit</h1>
             <div>
-              <img src="/images/logo.png" width={150} alt="" />
+              <img src="/images/logo.png" width={150} alt="alt-image" />
             </div>
             <h1>NexGenElit</h1>
             <div>
-              <img src="/images/logo.png" width={150} alt="" />
+              <img src="/images/logo.png" width={150} alt="alt-image" />
             </div>
             <h1>NexGenElit</h1>
             <div>
-              <img src="/images/logo.png" width={150} alt="" />
+              <img src="/images/logo.png" width={150} alt="alt-image" />
             </div>
             <h1>NexGenElit</h1>
             <div>
-              <img src="/images/logo.png" width={150} alt="" />
+              <img src="/images/logo.png" width={150} alt="alt-image" />
             </div>
           </div>
         </div>

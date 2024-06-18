@@ -1,7 +1,8 @@
 .services{
+    position: relative;
     overflow-x: hidden;
     padding-bottom:50px ;
-    background: black;
+    background: transparent;
     color: white;
     h2{
         font-size: 8.5vw;
@@ -138,11 +139,12 @@
         margin-left: calc(5vw + 4vw);
     }
     .headings{
-        margin-top: 0px;
+        margin-top: 50px;
+        margin-bottom: 50px;
         flex-direction: column;
         justify-content: center;
         gap: 20px;
-        padding: 0px calc(3.5vw + 5px) 50px;
+        padding: 0px calc(3.5vw + 5px) 0px;
 
         .img-content{
 
@@ -165,8 +167,11 @@
             display: flex;
             flex-direction: column-reverse;
             gap: 30px;
-            border-radius: 20px;
+            border-radius: 0px;
             padding: 20px 0;
+            border: none;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
             
             .left-side{
                 padding:0 20px;

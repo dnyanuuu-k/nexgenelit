@@ -110,7 +110,7 @@
             background: rgb(255, 255, 255);
             border: 2px solid black;
             border-radius: 50px;
-            height: 70vh;
+            min-height: 40vh;
             min-width: 350px;
             position: absolute;
             top: -10px;
@@ -120,6 +120,7 @@
             display: none;
             transition: all ease 500ms;
             z-index: 10 ;
+            gap: 30px;
 
       
         .menu-items{
@@ -139,6 +140,9 @@
 
             }
         }
+    }
+    .explore-more{
+        margin-right: 50px;
     }
     }
 }

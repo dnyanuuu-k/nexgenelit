@@ -1,11 +1,13 @@
 
 .technologies{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 50px calc(3.5vw + 5px);
     gap: 30px;
+    color: white;
 
     h2{
         font-size: 5.5vw;
@@ -44,6 +46,7 @@
             h5{
                 font-size: 22px;
                 text-align: right;
+                color: white;
             }
         }
     }
@@ -80,7 +83,7 @@
                 background: none;
                 outline: none;
                 font-size: 1.25rem;
-                color: black;
+                color: white;
                 font-family: gilroy-extra-bold;
                 letter-spacing: 1px;
                 cursor: pointer;
@@ -99,7 +102,7 @@
                     left:0;
                     bottom: -5px;
                     border-radius: 50px;
-                    background: black;
+                    background: white;
                     margin: 0 auto;
     
                 }
@@ -114,7 +117,7 @@
             .tab_btn.active{
                 font-size: 2rem;
                 padding-bottom: 4px;
-                border-bottom: 3px solid black;
+                border-bottom: 3px solid white;
             }
             
             
@@ -132,6 +135,7 @@
                 text-align: center;
                 gap: 50px;
                 animation: moving 0.5s ease;
+                
 
                 .content-item{
                     display: flex;
@@ -139,17 +143,20 @@
                     align-items: center;
                     gap: 20px;
                     font-size: 80px;
+                    color: white;
+                    opacity: 1;
 
                     span{
                         font-size: 16px;
+                        color: white;
                         font-weight: 900;
                         letter-spacing: 1px;
-                        border: 2px solid black;
+                        border: 2px solid white;
                         padding:5px 20px ;
                         border-radius: 50px;
                     }
                 }
-
+                
         }
         .content.active{
             display: flex;
@@ -167,7 +174,13 @@
         overflow: hidden;
         .heading{
             padding: 0px calc(3.5vw + 5px) 0px;
-            
+            flex-direction: column;
+            align-items: end;
+            gap: 20px;
+
+            h2{
+                font-size: 10.5vw;
+            }
             .img-contents{
     
                 img{
@@ -207,7 +220,8 @@
                         font-size: 60px;
     
                         span{
-                            font-size: 16px;
+                            font-size: 10px;
+                            padding: 3px 12px;
                         }
                     }
             }

@@ -6,11 +6,16 @@ function WhyNexGenElit() {
   useEffect(() => {
     // const animationImg = document.querySelectorAll(".item .img-container");
     const animationItems = document.querySelectorAll(".imgAnimations .item");
+    const allPara = document.querySelectorAll(".heading-para");
     animationItems.forEach((item, index) => {
       item.addEventListener("mousemove", () => {
         animationItems.forEach((item) => {
           item.classList.remove("active");
         });
+        allPara.forEach((para) => {
+          para.classList.remove("active");
+        });
+        allPara[index].classList.add("active");
         item.classList.add("active");
       });
     });
@@ -32,8 +37,9 @@ function WhyNexGenElit() {
           gsap.to(animationImg[index], {
             x: clientX,
             y: clientY,
+            ease: "slow(0.7,0.7,false)",
             opacity: 1,
-            duration: 2.5,
+            duration: 4.5,
             background: "#f3e9dd",
             scale: 1.25,
             ease: "elastic.out(1,0.3)",
@@ -59,10 +65,10 @@ function WhyNexGenElit() {
 
   return (
     <div className="whyNex">
-      {/* <img src="/images/collab.svg" alt="" />
-      <img src="/images/creativity.svg" alt="" />
-      <img src="/images/innovation.svg" alt="" />
-      <img src="/images/passion.svg" alt="" /> */}
+      {/* <img src="/images/collab.svg" alt="alt-image" />
+      <img src="/images/creativity.svg" alt="alt-image" />
+      <img src="/images/innovation.svg" alt="alt-image" />
+      <img src="/images/passion.svg" alt="alt-image" /> */}
       <div className="headings">
         <h4 className="first-heading">
           Why <span>NexGen Elit ?</span>
@@ -80,7 +86,7 @@ function WhyNexGenElit() {
               <h2>Creativity</h2>
             </div>
             <div className="img-container">
-              <img src="/images/creativity.svg" alt="" />
+              <img src="/images/creativity.svg" alt="alt-image" />
             </div>
             <p className="heading-para">
               We don't just think outside the box; we dance on its edges.
@@ -95,9 +101,9 @@ function WhyNexGenElit() {
               <h2>Innovation</h2>
             </div>
             <div className="img-container">
-              <img src="/images/innovation.svg" alt="" />
+              <img src="/images/innovation.svg" alt="alt-image" />
             </div>
-            <p>
+            <p className="heading-para">
               We're not here to follow trends; we're here to set them. Say hello
               to cutting-edge solutions that'll have your competitors green with
               envy.
@@ -111,9 +117,9 @@ function WhyNexGenElit() {
               <h2>Passion</h2>
             </div>
             <div className="img-container">
-              <img src="/images/passion.svg" alt="" />
+              <img src="/images/passion.svg" alt="alt-image" />
             </div>
-            <p>
+            <p className="heading-para">
               We eat, sleep, and breathe digital. Our team's passion is
               contagious – consider yourself warned
             </p>
@@ -126,9 +132,9 @@ function WhyNexGenElit() {
               <h2>Collaboration</h2>
             </div>
             <div className="img-container">
-              <img src="/images/collab.svg" alt="" />
+              <img src="/images/collab.svg" alt="alt-image" />
             </div>
-            <p>
+            <p className="heading-para">
               Your vision, our expertise – let's make magic together. We're not
               just service providers; we're your partners in success.
             </p>

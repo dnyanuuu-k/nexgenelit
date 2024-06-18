@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 function About() {
   // Refs for the elements we want to animate
-  const imgDivRef = useRef(null);
   const descriptionRefs = useRef([]);
   const thickTextRef = useRef(null); // Ref for the thick-text span
 
@@ -34,17 +33,17 @@ function About() {
     });
 
     // GSAP animation for increasing letter spacing on scroll
-    ScrollTrigger.create({
-      trigger: thickTextRef.current,
-      start: "top 70%", // Start when the top of the thick-text span reaches the top of the viewport
-      end: "bottom bottom", // End when the bottom of the thick-text span reaches the bottom of the viewport
-      onUpdate: (self) => {
-        gsap.to(thickTextRef.current, {
-          letterSpacing: 20 * self.progress, // Increase letter spacing based on scroll progress
-          ease: "linear", // Set easing to "none" for sensitive response
-        });
-      },
-    });
+    // ScrollTrigger.create({
+    //   trigger: thickTextRef.current,
+    //   start: "top 70%", // Start when the top of the thick-text span reaches the top of the viewport
+    //   end: "bottom bottom", // End when the bottom of the thick-text span reaches the bottom of the viewport
+    //   onUpdate: (self) => {
+    //     gsap.to(thickTextRef.current, {
+    //       letterSpacing: 20 * self.progress, // Increase letter spacing based on scroll progress
+    //       ease: "linear", // Set easing to "none" for sensitive response
+    //     });
+    //   },
+    // });
 
     // GSAP animation for the h1 element (right to left)
     gsap.fromTo(
@@ -257,7 +256,7 @@ function About() {
         </div>
         <div className="flexdiv">
           <div className="img-div">
-            <img src="./images/about/who2.png" alt="" />
+            <img src="./images/about/who2.png" alt="alt-image" />
           </div>
           <div className="content-div">
             <h3 className="subtitle">
@@ -300,7 +299,7 @@ function About() {
         <div className="left-div">
           <div className="left-card">
             <div className="imgDiv">
-              <img src="./images/about/left1.png" alt="" />
+              <img src="./images/about/left1.png" alt="alt-image" />
             </div>
             <div className="card-div">
               <h3>
@@ -319,13 +318,13 @@ function About() {
               </p>
             </div>
           </div>
-          {/* <div className="left-img"> <img src={contact} alt="" /> </div> */}
+          {/* <div className="left-img"> <img src={contact} alt="alt-image" /> </div> */}
         </div>
 
         <div className="right-div">
           <div className="right-card">
             <div className="imgDiv">
-              <img src="./images/about/right.png" alt="" />
+              <img src="./images/about/right.png" alt="alt-image" />
             </div>
             <div className="card-div">
               <h3>

@@ -3,7 +3,7 @@ import "../StartYourProject/StartYourProjectForm.scss";
 // import emailjs from '@emailjs/browser';
 import { send } from "@emailjs/browser";
 import Testimonials from "../Testimonials/Testimonials";
-import Spline from "@splinetool/react-spline";
+// import Spline from "@splinetool/react-spline";
 
 function StartYourProjectForm() {
   useEffect(() => {
@@ -69,8 +69,8 @@ function StartYourProjectForm() {
   return (
     <div className="container">
       <div className="bgVideo">
-        {/* <video src="/videos/bg4.mp4" muted loop autoPlay></video> */}
-        <Spline scene="https://prod.spline.design/4NLtR8ylsV2hSNkb/scene.splinecode" />
+        <video src="/videos/bg4.mp4" muted loop autoPlay></video>
+        {/* <Spline scene="https://prod.spline.design/4NLtR8ylsV2hSNkb/scene.splinecode" /> */}
       </div>
       <div className="intro">
         <div className="left-side">

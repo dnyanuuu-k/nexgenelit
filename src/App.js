@@ -7,10 +7,12 @@ import StartYourProjectForm from "./components/StartYourProject/StartYourProject
 import PAP from "./components/PrivacyAndPolicy/PAP";
 import About from "./components/About/About";
 import Work from "./components/Work/Work";
+import ScrollToTop from "./components/ScrollToTop";
 function App() {
   return (
     <main className="App">
       <Router>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -9,16 +9,20 @@
     gap: 30px;
     overflow-x: hidden;
     margin: 3px 0;
-    
+    .mailHeadingContainer{
+        display: flex;
+        white-space: nowrap;
+    }
     .mailHeading{
-        border: 2px solid white;
+        border-bottom: 2px solid white;
+        border-top: 2px solid white;
         padding: 30px 0;
         display: flex;
-        background: black;
         justify-content: center;
         align-items: center;
         gap: 50px;
         color: white;
+        animation: scrollRightLeft 50s linear infinite;
 
         h1{
             font-size: 6.5vw;
@@ -33,10 +37,12 @@
     display: flex;
     color: white;
     align-items: center;
-    justify-content: end;
+    justify-content: start;
     gap: 50px;
     // border: 2px solid white;
     padding: 10px;
+
+   
     
 
     h3{
@@ -44,3 +50,22 @@
     }
 
 }
+
+
+@keyframes scrollLeftRight {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes scrollRightLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }

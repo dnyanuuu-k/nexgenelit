@@ -18,16 +18,16 @@ figure.card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color: #333;
+    color: #ffffff;
     box-shadow: none !important;
     margin: 0;
     border: 2px solid orange;
     border-radius: 8px;
-    background-color: #fafafa;
     padding: 20px ;
     font-weight: 500;
     line-height: 1.6em;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    background: none;
 
 
     h5{
@@ -47,8 +47,9 @@ figure.card {
   figure.card blockquote {
     margin: 0;
     border-radius: 8px;
+    margin-top: 7px;
     position: relative;
-    background-color: #fafafa;
+    background:transparent ;
     padding: 0px 20px;
     font-size: 14px;
     font-weight: 500;

@@ -26,7 +26,7 @@ function Navbar() {
     <div className="Navbar">
       <Link to="/">
         <div className="logo">
-          <img width={70} src="./images/logo-1.ico" alt="" />
+          <img width={70} src="./images/logo-1.ico" alt="alt-image" />
         </div>
       </Link>
       <div onClick={showMenu} ref={openMenu} className="menu-icon">

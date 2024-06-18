@@ -1,11 +1,6 @@
 import React from "react";
 import "../Footer/Footer.scss";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedin,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { Link } from "react-router-dom";
 
@@ -16,7 +11,7 @@ function Footer() {
         <div className="footer-content">
           <div className="left-side">
             <div className="logo">
-              <img width={70} src="/images/logo.png" alt="" />
+              <img width={70} src="/images/logo.png" alt="alt-image" />
             </div>
             <Link to="/">
               <h5>NexGen Elit</h5>
@@ -25,9 +20,8 @@ function Footer() {
           <div className="right-side">
             <div className="top">
               <div className="hyperlinks">
-                <a href="">Work</a>
-                <a href="">About</a>
-                <a href="">Contact</a>
+                <Link to="/about">About</Link>
+                <Link to="/start-your-project">Contact</Link>
                 <Link to="/privacy-policy">Privacy & Policy</Link>
               </div>
               <div className="emaillink">hello@nexgenelit.com</div>

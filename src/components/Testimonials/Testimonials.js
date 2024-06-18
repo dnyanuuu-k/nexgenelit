@@ -78,7 +78,7 @@ function Testimonials() {
           </div>
           <div>
             <figure className="card">
-              <div className="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <div className="stars">&#9733;&#9733;&#9733;&#9733;</div>
 
               <blockquote>
                 I was blown away by NexGen Elit's creativity and expertise in
@@ -96,7 +96,7 @@ function Testimonials() {
           </div>
           <div>
             <figure className="card">
-              <div className="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <div className="stars">&#9733;&#9733;&#9733;&#9733;</div>
 
               <blockquote>
                 NexGen Elit delivered a stunning website that exceeded our
@@ -115,7 +115,7 @@ function Testimonials() {
           </div>
           <div>
             <figure className="card">
-              <div className="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <div className="stars">&#9733;&#9733;&#9733;</div>
               <blockquote>
                 Working with NexGen Elit was a game-changer for my business.
                 They not only created a beautiful website but also provided
@@ -185,7 +185,7 @@ function Testimonials() {
           </div>
           <div>
             <figure className="card">
-              <div className="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <div className="stars">&#9733;&#9733;&#9733;&#9733;</div>
 
               <blockquote>
                 Choosing NexGen Elit for my website development was the best

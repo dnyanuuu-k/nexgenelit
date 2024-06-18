@@ -82,22 +82,22 @@ function Services() {
       },
     });
   });
-  useGSAP(() => {
-    gsap.to(".services", {
-      backgroundColor: "transparent",
-      color: "black",
-      stagger: 1,
-      duration: 2.5,
-      opacity: 1,
-      scrollTrigger: {
-        trigger: ".services-content",
-        start: "top 90%",
-        end: "top 100%",
-        scrub: 1,
-        // markers: true,
-      },
-    });
-  });
+  // useGSAP(() => {
+  //   gsap.to(".services", {
+  //     backgroundColor: "transparent",
+  //     color: "black",
+  //     stagger: 1,
+  //     duration: 2.5,
+  //     opacity: 1,
+  //     scrollTrigger: {
+  //       trigger: ".services-content",
+  //       start: "top 90%",
+  //       end: "top 100%",
+  //       scrub: 1,
+  //       // markers: true,
+  //     },
+  //   });
+  // });
 
   // function changeLogoUrl() {
   //   const url = document.querySelector(".Navbar .logo img").attributes.src;
@@ -105,27 +105,27 @@ function Services() {
   //   setLogoUrl("./images/logo-b.png");
   // }
 
-  useGSAP(() => {
-    gsap.to(".Navbar .menu-icon .line", {
-      background: "black",
-      stagger: 1,
-      scrollTrigger: {
-        trigger: ".services-content",
-        start: "top 10%",
-        end: "top 10%",
-        scrub: 1,
-      },
-    });
-    gsap.to(".Navbar .menu-icon ", {
-      border: "3px solid black",
-      scrollTrigger: {
-        trigger: ".services-content",
-        start: "top 10%",
-        end: "top 10%",
-        scrub: 1,
-      },
-    });
-  });
+  // useGSAP(() => {
+  //   gsap.to(".Navbar .menu-icon .line", {
+  //     background: "black",
+  //     stagger: 1,
+  //     scrollTrigger: {
+  //       trigger: ".services-content",
+  //       start: "top 10%",
+  //       end: "top 10%",
+  //       scrub: 1,
+  //     },
+  //   });
+  //   gsap.to(".Navbar .menu-icon ", {
+  //     border: "3px solid black",
+  //     scrollTrigger: {
+  //       trigger: ".services-content",
+  //       start: "top 10%",
+  //       end: "top 10%",
+  //       scrub: 1,
+  //     },
+  //   });
+  // });
 
   return (
     <div id="services">
@@ -136,7 +136,7 @@ function Services() {
             <h2 className="mainHeading secondary-heading">SERVICES</h2>
           </div>
           <div className="img-content">
-            <img src="/images/Vector 1.svg" alt="" />
+            <img src="/images/arrow-white.svg" alt="alt-image" />
             <h5>Where Dreams Meet Reality</h5>
           </div>
         </div>

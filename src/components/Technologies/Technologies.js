@@ -52,7 +52,7 @@ function Technologies() {
       scrollTrigger: {
         trigger: ".technologies",
         start: "top 90%",
-        end: "bottom 110%",
+        end: "top 60%",
         scrub: 1,
         // markers: true,
       },
@@ -69,7 +69,7 @@ function Technologies() {
       scrollTrigger: {
         trigger: ".technologies",
         start: "top 90%",
-        end: "bottom 90%",
+        end: "top 60%",
         scrub: 1,
         // markers: true,
       },
@@ -85,7 +85,7 @@ function Technologies() {
             <h2 className="mainHeadings secondary-heading">We Work With</h2>
           </div>
           <div className="img-contents">
-            <img src="/images/Vector 1.svg" alt="" />
+            <img src="/images/arrow-white.svg" alt="alt-image" />
           </div>
         </div>
         {/* <h4 className="fourth-heading">Technologies We Work With</h4> */}

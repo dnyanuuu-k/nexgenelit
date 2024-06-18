@@ -9,7 +9,7 @@ import FAQ from "../FAQ/FAQ";
 import Diamond from "../Diamond/Diamond";
 import { Link } from "react-router-dom";
 import HorizontalMail from "../HorizontalMail/HorizontalMail";
-import Spline from "@splinetool/react-spline";
+// import Spline from "@splinetool/react-spline";
 // import { SplitText } from "gsap-trial/SplitText";
 // gsap.registerPlugin(SplitText);
 // let headingSplitText = new SplitText(".split", { type: "chars" });
@@ -21,10 +21,10 @@ function Home() {
   // const allHeadings = document.querySelectorAll(".heading");
   // allHeadings.forEach((heading) => {
   //   heading.addEventListener("mousemove", () => {
-  //     cursor.className.add("grov");
+  //     cursor.classList.add("grov");
   //   });
   //   heading.addEventListener("mouseleave", () => {
-  //     cursor.className.remove("grov");
+  //     cursor.classList.remove("grov");
   //   });
   // });
   // useGSAP(() => {
@@ -66,8 +66,8 @@ function Home() {
     <div className="Home">
       {/* <div className="movingCursor"></div> */}
       <div className="bgVideo">
-        {/* <video src="/videos/bg4.mp4" muted loop autoPlay></video> */}
-        <Spline scene="https://prod.spline.design/4NLtR8ylsV2hSNkb/scene.splinecode" />
+        <video src="/videos/bg4.mp4" muted loop autoPlay></video>
+        {/* <Spline scene="https://prod.spline.design/4NLtR8ylsV2hSNkb/scene.splinecode" /> */}
       </div>
 
       <div className="main">
@@ -101,13 +101,13 @@ function Home() {
             </div>
           </Link>
         </div>
-        <Services />
-        <Technologies />
-        <WhyNexGenElit />
-        <HorizontalMail />
-        <FAQ />
-        <Diamond />
       </div>
+      <Services />
+      <Technologies />
+      <WhyNexGenElit />
+      <HorizontalMail />
+      <FAQ />
+      <Diamond />
     </div>
   );
 }
