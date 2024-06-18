@@ -2,7 +2,7 @@
     height: calc(100vh - 100px);
     background: transparent;
     width: 100%;
-    padding: 100px 0;
+    padding: 0;
     position: relative;
 
     .diamondContent {
@@ -44,20 +44,25 @@
             object-fit: contain;
         }
     }
-
+.diamondHeadingContainer{
+    display: flex;
     .diamondHeading {
         color: white;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 50px;
-        // animation: headingScroll ease infinite 20s;
+        animation: headingScroll ease infinite 30s;
 
         h1 {
-            font-size: 8.5vw;
+            font-size: 7.5vw;
             font-family: gilroy-extra-bold;
         }
+        img{
+            width: 100px;
+        }
     }
+}
 }
 
 @keyframes headingScroll {
@@ -65,12 +70,17 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-3000px);
+        transform: translateX(-100%);
     }
 }
 
 // Mobile devices
 @media screen and (max-width: 480px) {
+
+    .diamond{
+        height: calc(70vh - 100px);
+    position: relative;
+
     .diamondContent p {
         font-size: 18px;
         max-width: 90% !important;
@@ -83,7 +93,18 @@
     .diamondHeading h1 {
         font-size: 13.5vw !important;
     }
-    
+
+    .diamondHeadingContainer{
+        .diamondHeading {
+            h1 {
+                font-size: 13.5vw;
+            }
+            img{
+                width: 60px;
+            }
+        }
+    }
+}
 }
 
 // Tablet devices

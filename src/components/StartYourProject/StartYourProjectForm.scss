@@ -333,7 +333,13 @@
         }
 
 
+
     }
+    .error {
+        color: red;
+        margin-top: 10px;
+        font-size: 0.875em;
+      }
 
 }
 .checkbox-wrapper-24 {
@@ -443,6 +449,8 @@
     transition: width 150ms ease 100ms;
   }
 
+
+  
 
   @media screen and (max-width: 480px) {  
   

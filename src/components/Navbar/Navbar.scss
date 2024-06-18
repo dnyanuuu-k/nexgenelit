@@ -17,6 +17,7 @@
         height: fit-content;
         width:fit-content;
         img{
+            width: 70px;
             mix-blend-mode: hue;
         }
     }
@@ -150,3 +151,76 @@
 
 
 
+@media screen and (max-width: 480px) { 
+
+    .Navbar{
+        height: 70px;
+        // align-items: baseline;
+        text-align: center;
+    
+        .logo{
+            img{
+                width: 50px;
+                margin-top: 25px;
+            }
+        }
+    
+        .menu-icon{
+            height: 50px;
+            width: 50px;
+            background: transparent;
+            border: 2px solid white;
+            gap: 5px;
+
+            .line{
+                height: 2.2px;
+                width: 20px;
+            }
+           
+        }
+        .close-icon{
+            height: 50px;
+            width: 50px;
+            background: transparent;
+    
+            .line{
+                height: 2.2pxpx;
+                width: 20px;
+            }
+        }
+    
+        
+        .menu{
+            top: -10px;
+            .close-icon{
+                .line{
+                    width: 25px;
+                }
+            }
+    
+            .menu-content
+            {
+                min-width: 320px;
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                padding: 80px 30px;
+                padding-bottom: 30px;
+    
+          
+            .menu-items{
+                gap: 15px;
+    
+                a{
+                    font-size: 32px;
+                    // font-family: gilroy-extra-bold;
+                    
+                }
+            }
+        }
+        .explore-more{
+            margin-right: 50px;
+        }
+        }
+    }
+}

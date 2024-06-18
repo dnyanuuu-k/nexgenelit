@@ -1,61 +1,79 @@
-import React, { useRef } from "react";
-import "../Navbar/Navbar.scss";
+import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "../Navbar/Navbar.scss";
+
 function Navbar() {
-  const line1 = useRef();
-  const line2 = useRef();
-  const openMenu = useRef();
-  const closeMenu = useRef();
-  const menu = useRef();
-  const menuClontent = useRef();
+  const menuRef = useRef();
+  const menuContentRef = useRef();
+  const openMenuRef = useRef();
+  const closeMenuRef = useRef();
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        closeMenuRef.current.style.display === "flex"
+      ) {
+        closeMenu();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const showMenu = () => {
-    menuClontent.current.style.display = "flex";
-    closeMenu.current.style.display = "flex";
-    openMenu.current.style.display = "none";
-    menu.current.style.right = "0";
+    menuContentRef.current.style.display = "flex";
+    closeMenuRef.current.style.display = "flex";
+    openMenuRef.current.style.display = "none";
+    setTimeout(() => {
+      menuRef.current.style.right = "0";
+    }, 10);
   };
-  const close = () => {
-    menuClontent.current.style.display = "none";
-    closeMenu.current.style.display = "none";
-    openMenu.current.style.display = "flex";
-    menu.current.style.right = "-500";
+
+  const closeMenu = () => {
+    menuRef.current.style.right = "-500px";
+    setTimeout(() => {
+      closeMenuRef.current.style.display = "none";
+      menuContentRef.current.style.display = "none";
+      openMenuRef.current.style.display = "flex";
+    }, 500); // Match the CSS transition duration
   };
 
   return (
     <div className="Navbar">
       <Link to="/">
         <div className="logo">
-          <img width={70} src="./images/logo-1.ico" alt="alt-image" />
+          <img src="./images/logo-1.ico" alt="altimage" />
         </div>
       </Link>
-      <div onClick={showMenu} ref={openMenu} className="menu-icon">
-        <div ref={line1} className="line line1"></div>
-        <div ref={line2} className="line line2"></div>
+      <div onClick={showMenu} ref={openMenuRef} className="menu-icon">
+        <div className="line"></div>
+        <div className="line"></div>
       </div>
-      <div ref={menu} className="menu">
-        <div onClick={close} ref={closeMenu} className="close-icon">
-          <div ref={line1} className="line line1"></div>
-          <div ref={line2} className="line line2"></div>
+      <div ref={menuRef} className="menu">
+        <div onClick={closeMenu} ref={closeMenuRef} className="close-icon">
+          <div className="line line1"></div>
+          <div className="line line2"></div>
         </div>
-        <div ref={menuClontent} className="menu-content">
+        <div ref={menuContentRef} className="menu-content">
           <div className="menu-items">
-            <Link onClick={close} to="/">
+            <Link onClick={closeMenu} to="/">
               Home
             </Link>
-            {/* <Link onClick={close} to="/work">
-              Work
-            </Link> */}
-            <Link onClick={close} to="/about">
+            <Link onClick={closeMenu} to="/about">
               About Us
             </Link>
-            <Link onClick={close} to="/start-your-project">
+            <Link onClick={closeMenu} to="/start-your-project">
               Contact Us
             </Link>
           </div>
           <Link to="/start-your-project">
             <div className="explore-more">
-              <button onClick={close} className="learn-more">
+              <button onClick={closeMenu} className="learn-more">
                 <span className="circle" aria-hidden="true">
                   <span className="icon arrow"></span>
                 </span>

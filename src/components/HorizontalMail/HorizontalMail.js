@@ -61,45 +61,155 @@ function HorizontalMail() {
         <img src="/images/wave2.svg" alt="alt-image" />
       </div> */}
       <div className="rightSideBrand">
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
+        <div className="marqueGroup">
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
         </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
+        <div className="marqueGroup">
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
         </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
-        </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
-        </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
-        </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
-        </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
-        </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
-        </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
-        </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
+        <div className="marqueGroup">
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
         </div>
       </div>
       <div className="mailHeadingContainer">
@@ -180,56 +290,156 @@ function HorizontalMail() {
         </div>
       </div>
       <div className="rightSideBrand">
-        {/* <div className="marqueGroup"> */}
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
+        <div className="marqueGroup">
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
         </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
+        <div className="marqueGroup">
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
         </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
+        <div className="marqueGroup">
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
+          <h3>NexGenElit</h3>
+          <div>
+            <img src="/images/logo.png" width={40} alt="alt-image" />
+          </div>
         </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
-        </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
-        </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
-        </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
-        </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
-        </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
-        </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
-        </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
-        </div>
-        <h3>NexGenElit</h3>
-        <div>
-          <img src="/images/logo.png" width={40} alt="alt-image" />
-        </div>
-        {/* </div> */}
       </div>
     </div>
   );

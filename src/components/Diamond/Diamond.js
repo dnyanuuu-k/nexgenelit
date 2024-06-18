@@ -45,6 +45,42 @@ function Diamond() {
               <img src="/images/logo.png" width={150} alt="alt-image" />
             </div>
           </div>
+          <div className="diamondHeading">
+            <h1>NexGenElit</h1>
+            <div>
+              <img src="/images/logo.png" width={150} alt="alt-image" />
+            </div>
+            <h1>NexGenElit</h1>
+            <div>
+              <img src="/images/logo.png" width={150} alt="alt-image" />
+            </div>
+            <h1>NexGenElit</h1>
+            <div>
+              <img src="/images/logo.png" width={150} alt="alt-image" />
+            </div>
+            <h1>NexGenElit</h1>
+            <div>
+              <img src="/images/logo.png" width={150} alt="alt-image" />
+            </div>
+          </div>
+          <div className="diamondHeading">
+            <h1>NexGenElit</h1>
+            <div>
+              <img src="/images/logo.png" width={150} alt="alt-image" />
+            </div>
+            <h1>NexGenElit</h1>
+            <div>
+              <img src="/images/logo.png" width={150} alt="alt-image" />
+            </div>
+            <h1>NexGenElit</h1>
+            <div>
+              <img src="/images/logo.png" width={150} alt="alt-image" />
+            </div>
+            <h1>NexGenElit</h1>
+            <div>
+              <img src="/images/logo.png" width={150} alt="alt-image" />
+            </div>
+          </div>
         </div>
         <p>
           Why Choose Us? <br /> Because We're the Unicorn in a Sea of Donkeys!

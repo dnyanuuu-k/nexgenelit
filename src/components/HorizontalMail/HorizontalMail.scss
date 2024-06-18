@@ -22,7 +22,7 @@
         align-items: center;
         gap: 50px;
         color: white;
-        animation: scrollRightLeft 50s linear infinite;
+        animation: scrollLeftRight 50s linear infinite;
 
         h1{
             font-size: 6.5vw;
@@ -37,14 +37,19 @@
     display: flex;
     color: white;
     align-items: center;
-    justify-content: start;
+    justify-content: center;
     gap: 50px;
     // border: 2px solid white;
     padding: 10px;
 
-   
-    
+    .marqueGroup{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      animation: scrollRightLeft 50s linear infinite;
 
+    }
     h3{
         width: fit-content;
     }

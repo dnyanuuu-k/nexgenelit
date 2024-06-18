@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import "../Technologies/Technologies.scss";
 import {
   FaAngular,
@@ -20,22 +19,54 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 
+const technologyTabs = [
+  {
+    category: "Mobile",
+    items: [
+      { icon: FaAppStoreIos, name: "iOS" },
+      { icon: IoLogoAndroid, name: "Android" },
+      { icon: FaReact, name: "React Native" },
+      { icon: SiFlutter, name: "Flutter" },
+      { icon: FaSwift, name: "Swift" },
+      { icon: TbBrandKotlin, name: "Kotlin" },
+    ],
+  },
+  {
+    category: "Frontend",
+    items: [
+      { icon: FaAngular, name: "Angular" },
+      { icon: FaReact, name: "React JS" },
+      { icon: SiTypescript, name: "TypeScript" },
+      { icon: FaVuejs, name: "Vue JS" },
+      { icon: FaHtml5, name: "HTML 5" },
+      { icon: FaCss3Alt, name: "CSS 3" },
+      { icon: IoLogoJavascript, name: "JavaScript" },
+    ],
+  },
+  {
+    category: "Backend",
+    items: [
+      { icon: DiPhp, name: "PHP" },
+      { icon: FaJava, name: "Java" },
+      { icon: FaNode, name: "Node" },
+    ],
+  },
+];
+
 function Technologies() {
   useEffect(() => {
     const technologyTabBtns = document.querySelectorAll(".tab_btn");
+    const technologyContents = document.querySelectorAll(".content");
 
-    const technologyContets = document.querySelectorAll(".content");
-    technologyTabBtns.forEach((tabBtns, index) => {
-      tabBtns.addEventListener("click", () => {
-        technologyTabBtns.forEach((tabBtn) => {
-          tabBtn.classList.remove("active");
-        });
-        tabBtns.classList.add("active");
+    technologyTabBtns.forEach((tabBtn, index) => {
+      tabBtn.addEventListener("click", () => {
+        technologyTabBtns.forEach((btn) => btn.classList.remove("active"));
+        tabBtn.classList.add("active");
 
-        technologyContets.forEach((tabContent) => {
-          tabContent.classList.remove("active");
-        });
-        technologyContets[index].classList.add("active");
+        technologyContents.forEach((content) =>
+          content.classList.remove("active")
+        );
+        technologyContents[index].classList.add("active");
       });
     });
   }, []);
@@ -54,10 +85,10 @@ function Technologies() {
         start: "top 90%",
         end: "top 60%",
         scrub: 1,
-        // markers: true,
       },
     });
   });
+
   useGSAP(() => {
     gsap.from(".img-contents img", {
       xPercent: 130,
@@ -71,7 +102,6 @@ function Technologies() {
         start: "top 90%",
         end: "top 60%",
         scrub: 1,
-        // markers: true,
       },
     });
   });
@@ -88,94 +118,31 @@ function Technologies() {
             <img src="/images/arrow-white.svg" alt="alt-image" />
           </div>
         </div>
-        {/* <h4 className="fourth-heading">Technologies We Work With</h4> */}
         <div className="technologies-content">
           <div className="tab_box">
-            <button className="tab_btn active">
-              <p>Mobile</p>
-            </button>
-            <button className="tab_btn">
-              <p>Frontend</p>
-            </button>
-            <button className="tab_btn">
-              <p>Backend</p>
-            </button>
+            {technologyTabs.map((tab, index) => (
+              <button
+                className={`tab_btn ${index === 0 ? "active" : ""}`}
+                key={index}
+              >
+                <p>{tab.category}</p>
+              </button>
+            ))}
           </div>
           <div className="content_box">
-            {/* Android  */}
-            <div className="content active">
-              <div className="content-item">
-                <FaAppStoreIos />
-                <span>IOS</span>
+            {technologyTabs.map((tab, index) => (
+              <div
+                className={`content ${index === 0 ? "active" : ""}`}
+                key={index}
+              >
+                {tab.items.map((item, idx) => (
+                  <div className="content-item" key={idx}>
+                    <item.icon />
+                    <span>{item.name}</span>
+                  </div>
+                ))}
               </div>
-              <div className="content-item">
-                <IoLogoAndroid />
-                <span>Android</span>
-              </div>
-              <div className="content-item">
-                <FaReact />
-                <span>React Native</span>
-              </div>
-              <div className="content-item">
-                <SiFlutter />
-                <span>Flutter</span>
-              </div>
-              <div className="content-item">
-                <FaSwift />
-                <span>Swift</span>
-              </div>
-              <div className="content-item">
-                <TbBrandKotlin />
-                <span>Kotlin</span>
-              </div>
-            </div>
-
-            {/* Frontend  */}
-
-            <div className="content">
-              <div className="content-item">
-                <FaAngular />
-                <span>Angular</span>
-              </div>
-              <div className="content-item">
-                <FaReact />
-                <span>React JS</span>
-              </div>
-              <div className="content-item">
-                <SiTypescript />
-                <span>Type Script</span>
-              </div>
-              <div className="content-item">
-                <FaVuejs />
-                <span>Vue JS</span>
-              </div>
-              <div className="content-item">
-                <FaHtml5 />
-                <span>HTML 5</span>
-              </div>
-              <div className="content-item">
-                <FaCss3Alt />
-                <span>CSS 3</span>
-              </div>
-              <div className="content-item">
-                <IoLogoJavascript />
-                <span>JS</span>
-              </div>
-            </div>
-            <div className="content">
-              <div className="content-item">
-                <DiPhp />
-                <span>PHP</span>
-              </div>
-              <div className="content-item">
-                <FaJava />
-                <span>JAVA</span>
-              </div>
-              <div className="content-item">
-                <FaNode />
-                <span>Node</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>

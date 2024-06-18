@@ -42,33 +42,20 @@ function WhyNexGenElit() {
             duration: 4.5,
             background: "#f3e9dd",
             scale: 1.25,
+            yoyo: true,
             ease: "elastic.out(1,0.3)",
           });
 
           gsap.to(img, {
             opacity: 0,
           });
-
-          // gsap.from(itemContainer, {
-          //   background: "none",
-          //   delay: 2,
-          // });
-
-          // gsap.to(itemContainer[index], {
-          //   background: "#f3e9dd",
-          // });
         });
-        // itemContainer[index].style.backgroundColor = "#f3e9dd";
       });
     });
   });
 
   return (
     <div className="whyNex">
-      {/* <img src="/images/collab.svg" alt="alt-image" />
-      <img src="/images/creativity.svg" alt="alt-image" />
-      <img src="/images/innovation.svg" alt="alt-image" />
-      <img src="/images/passion.svg" alt="alt-image" /> */}
       <div className="headings">
         <h4 className="first-heading">
           Why <span>NexGen Elit ?</span>

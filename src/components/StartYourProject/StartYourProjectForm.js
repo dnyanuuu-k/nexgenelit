@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from "react";
 import "../StartYourProject/StartYourProjectForm.scss";
-// import emailjs from '@emailjs/browser';
 import { send } from "@emailjs/browser";
 import Testimonials from "../Testimonials/Testimonials";
-// import Spline from "@splinetool/react-spline";
 
 function StartYourProjectForm() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [budget, setBudget] = useState("");
+  const [message, setMessage] = useState("");
+  const [interestedIn, setInterestedIn] = useState([]);
+  const [privacyPolicy, setPrivacyPolicy] = useState(false);
+  const [newsletter, setNewsletter] = useState(false);
+  const [errors, setErrors] = useState({});
+
   useEffect(() => {
     const inputs = document.querySelectorAll(".checkBoxes label input");
     const labels = document.querySelectorAll(".checkBoxes label");
@@ -26,14 +34,6 @@ function StartYourProjectForm() {
     });
   }, []);
 
-  const [lastName, setLastName] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [email, setEmail] = useState("");
-  const [budget, setBudget] = useState("");
-  const [message, setMessage] = useState("");
-  const [interestedIn, setInterestedIn] = useState([]);
-  // const [attachment, setAttachment] = useState();
-
   const handleCheckboxChange = (event) => {
     const { value, checked } = event.target;
     if (checked) {
@@ -43,10 +43,47 @@ function StartYourProjectForm() {
     }
   };
 
+  const validateForm = () => {
+    const newErrors = {};
+    if (!firstName) newErrors.firstName = "First Name is required";
+    if (!lastName) newErrors.lastName = "Last Name is required";
+    if (!email) newErrors.email = "Email is required";
+    if (!budget) newErrors.budget = "Budget is required";
+    if (!message) newErrors.message = "Message is required";
+    if (interestedIn.length === 0)
+      newErrors.interestedIn = "At least one option must be selected";
+    if (!privacyPolicy)
+      newErrors.privacyPolicy = "You must accept the privacy policy";
+    if (!newsletter) newErrors.newsletter = "You must accept the newsletter";
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const resetForm = () => {
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setBudget("");
+    setMessage("");
+    setInterestedIn([]);
+    setPrivacyPolicy(false);
+    setNewsletter(false);
+
+    // Reset checkbox styles
+    const labels = document.querySelectorAll(".checkBoxes label");
+    labels.forEach((label) => {
+      label.style.backgroundColor = "black";
+      label.style.color = "white";
+      label.style.borderColor = "white";
+    });
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
+
     const serviceId = "service_xd4ow8v";
-    const templeteId = "template_xfegfbk";
+    const templateId = "template_xfegfbk";
     const userId = "mAEwXl68SH4ip20_3";
     const data = {
       first_name: firstName,
@@ -57,11 +94,12 @@ function StartYourProjectForm() {
       value: interestedIn,
     };
 
-    send(serviceId, templeteId, data, userId).then((response) => {
-      if ((response.status = "200")) {
+    send(serviceId, templateId, data, userId).then((response) => {
+      if (response.status === 200) {
         alert("Submitted");
+        resetForm();
       } else {
-        alert("error occured");
+        alert("An error occurred");
       }
     });
   };
@@ -70,7 +108,6 @@ function StartYourProjectForm() {
     <div className="container">
       <div className="bgVideo">
         <video src="/videos/bg4.mp4" muted loop autoPlay></video>
-        {/* <Spline scene="https://prod.spline.design/4NLtR8ylsV2hSNkb/scene.splinecode" /> */}
       </div>
       <div className="intro">
         <div className="left-side">
@@ -84,7 +121,7 @@ function StartYourProjectForm() {
           </h5>
         </div>
         <div className="right-side">
-          <span>New Buisness</span>
+          <span>New Business</span>
           <div className="number">
             <h6>+91 72196 60800</h6>
           </div>
@@ -101,7 +138,7 @@ function StartYourProjectForm() {
         </div>
       </div>
       <div className="formContainer">
-        <form className="form" action="">
+        <form className="form" onSubmit={sendEmail}>
           <legend>I am Interested In :</legend>
           <div className="checkBoxes">
             <label>
@@ -111,6 +148,7 @@ function StartYourProjectForm() {
                 name="interestedIn"
                 id="aNewWebsite"
                 value={"A New Website"}
+                checked={interestedIn.includes("A New Website")}
               />
               <span className="checkBtn">A new Website</span>
             </label>
@@ -121,6 +159,7 @@ function StartYourProjectForm() {
                 name="interestedIn"
                 id="eCommerce"
                 value={"E - Commerce"}
+                checked={interestedIn.includes("E - Commerce")}
               />
               <span className="checkBtn">E - Commerce</span>
             </label>
@@ -131,6 +170,7 @@ function StartYourProjectForm() {
                 name="interestedIn"
                 id="development"
                 value={"Development"}
+                checked={interestedIn.includes("Development")}
               />
               <span className="checkBtn">Development</span>
             </label>
@@ -141,6 +181,7 @@ function StartYourProjectForm() {
                 name="interestedIn"
                 id="branding"
                 value={"Branding"}
+                checked={interestedIn.includes("Branding")}
               />
               <span className="checkBtn">Branding</span>
             </label>
@@ -151,6 +192,7 @@ function StartYourProjectForm() {
                 name="interestedIn"
                 id="appFromScratch"
                 value={"App From Scratch"}
+                checked={interestedIn.includes("App From Scratch")}
               />
               <span className="checkBtn">App From Scratch</span>
             </label>
@@ -161,55 +203,63 @@ function StartYourProjectForm() {
                 name="interestedIn"
                 id="motionGraphics"
                 value={"Motion Graphics"}
+                checked={interestedIn.includes("Motion Graphics")}
               />
               <span className="checkBtn">Motion Graphics</span>
             </label>
           </div>
+          {errors.interestedIn && (
+            <div className="error">{errors.interestedIn}</div>
+          )}
           <div className="inputData">
             <div className="names">
               <input
                 required
-                onChange={(e) => {
-                  setFirstName(e.target.value);
-                }}
+                onChange={(e) => setFirstName(e.target.value)}
                 type="text"
                 placeholder="First Name*"
+                value={firstName}
               />
+              {errors.firstName && (
+                <div className="error">{errors.firstName}</div>
+              )}
               <input
                 required
-                onChange={(e) => {
-                  setLastName(e.target.value);
-                }}
+                onChange={(e) => setLastName(e.target.value)}
                 type="text"
                 placeholder="Last Name*"
+                value={lastName}
               />
+              {errors.lastName && (
+                <div className="error">{errors.lastName}</div>
+              )}
             </div>
             <input
               required
-              onChange={(e) => {
-                setEmail(e.target.value);
-              }}
+              onChange={(e) => setEmail(e.target.value)}
               type="email"
               placeholder="Email*"
+              value={email}
             />
+            {errors.email && <div className="error">{errors.email}</div>}
             <input
               required
-              onChange={(e) => {
-                setBudget(e.target.value);
-              }}
+              onChange={(e) => setBudget(e.target.value)}
               type="number"
               placeholder="Budget ($)"
+              value={budget}
             />
+            {errors.budget && <div className="error">{errors.budget}</div>}
           </div>
           <div className="message">
             <input
               required
-              onChange={(e) => {
-                setMessage(e.target.value);
-              }}
+              onChange={(e) => setMessage(e.target.value)}
               type="text"
               placeholder="Message"
+              value={message}
             />
+            {errors.message && <div className="error">{errors.message}</div>}
             <div className="submit">
               <div>
                 <div>
@@ -218,7 +268,8 @@ function StartYourProjectForm() {
                       type="checkbox"
                       id="newsletter"
                       name="check"
-                      defaultValue
+                      checked={newsletter}
+                      onChange={() => setNewsletter(!newsletter)}
                     />
                     <label htmlFor="newsletter">
                       <span />
@@ -228,12 +279,16 @@ function StartYourProjectForm() {
                       </p>
                     </label>
                   </div>
+                  {errors.newsletter && (
+                    <div className="error">{errors.newsletter}</div>
+                  )}
                   <div className="checkbox-wrapper-24">
                     <input
                       type="checkbox"
                       id="privacyPolicy"
                       name="check"
-                      defaultValue
+                      checked={privacyPolicy}
+                      onChange={() => setPrivacyPolicy(!privacyPolicy)}
                     />
                     <label htmlFor="privacyPolicy">
                       <span />
@@ -243,6 +298,9 @@ function StartYourProjectForm() {
                       </p>
                     </label>
                   </div>
+                  {errors.privacyPolicy && (
+                    <div className="error">{errors.privacyPolicy}</div>
+                  )}
                 </div>
               </div>
               <div className="submitButton">
@@ -251,9 +309,7 @@ function StartYourProjectForm() {
                     <span className="circle" aria-hidden="true">
                       <span className="icon arrow"></span>
                     </span>
-                    <span onClick={sendEmail} className="button-text">
-                      Submit
-                    </span>
+                    <span className="button-text">Submit</span>
                   </button>
                 </div>
               </div>
@@ -275,7 +331,7 @@ function StartYourProjectForm() {
             reaches the Night King.
           </li>
           <li>
-            <span>elepathic Communication:</span> Focus your mind's eye and
+            <span>Telepathic Communication:</span> Focus your mind's eye and
             transmit your thoughts directly to our digital cortex. We'll be
             listening for your psychic signals.
           </li>

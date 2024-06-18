@@ -164,6 +164,7 @@
           z-index: -1;
 
     }
+
       .heading-container{
         // z-index: -1;
         // border: 2px solid black;
@@ -237,6 +238,7 @@
          
          button.learn-more .circle {
           background:white;
+          z-index: 10;
          }
          
          button.learn-more .circle .icon {
@@ -257,21 +259,25 @@
          button.learn-more .button-text {
           color: white;
           border: 1px solid white;
+          background: black;
          }
          
          button:hover .circle {
-          width: 122%;
+          width: 3rem;
+          z-index: 10;
          }
          button:hover .circle .icon.arrow {
           background:black;
          }
          
          button .button-text {
-              color: white;
+              color: black;
               border: none;
-         }
-         button:hover .button-text {
-          color: black;
+              z-index: 1;
+            }
+            button:hover .button-text {
+           background: rgb(234, 0, 255);
+          color: white;
          }
   }
 
